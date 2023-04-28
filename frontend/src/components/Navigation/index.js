@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import LoginFormModal from '../LoginFormModal';
 import './Navigation.css';
+import Logo from '../../images/logo/alter.svg';
 
 function Navigation({ isLoaded }){
   const sessionUser = useSelector(state => state.session.user);
@@ -47,44 +48,63 @@ function Navigation({ isLoaded }){
   window.addEventListener('resize', showButton);
 
   return (
-    <ul className='navbar-container'>
-      <li className='nav-item'>
-        <NavLink className='nav-links' exact to="/">Home</NavLink>
+    <nav className='navbar'>
+    <div className='navbar-container'>
+      <Link  className='navbar-logo' onClick={() => closeMobileMenu("home")}>
+        <img className='alter-logo' src={Logo} alt="Alter Logo" />
+      </Link>
+      <div className='menu-icon' onClick={handleClick}>
+        <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+      </div>
+      <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+        <li className='nav-item'>
+          <Link className='nav-links' href="home" onClick={() => closeMobileMenu("about")}>
+            Home
+          </Link>
+        </li>
+        <li className='nav-item'>
+          <Link
+          
+            className='nav-links'
+            onClick={() => closeMobileMenu("novel")}
+          >
+            About
+          </Link>
+        </li>
+        <li className='nav-item'>
+          <Link
+          
+            className='nav-links'
+            onClick={() => closeMobileMenu("musical")}
+          >
+            Games
+          </Link>
+        </li>
+        <li className='nav-item'>
+          <Link
+          
+            className='nav-links'
+            onClick={() => closeMobileMenu("VR")}
+          >
+            Our Team
+          </Link>
+        </li>
+        <li className='nav-item'>
+          <Link
+          
+            className='nav-links'
+            onClick={() => closeMobileMenu("VR")}
+          >
+            Contact
+          </Link>
+        </li>
+      </ul>
+      <div className='nav-item'>
+        {/* <NavLink className='nav-links' exact to="/">Home</NavLink> */}
         {isLoaded && sessionLinks}
-      </li>
-      <li className='nav-item'>
-        <Link className='nav-links' href="home" onClick={() => closeMobileMenu("about")}>
-          ABOUT
-        </Link>
-      </li>
-      <li className='nav-item'>
-        <Link
-        
-          className='nav-links'
-          onClick={() => closeMobileMenu("novel")}
-        >
-          NOVEL
-        </Link>
-      </li>
-      <li className='nav-item'>
-        <Link
-        
-          className='nav-links'
-          onClick={() => closeMobileMenu("musical")}
-        >
-          MUSICAL
-        </Link>
-      </li>
-      <li className='nav-item'>
-        <Link
-        
-          className='nav-links'
-          onClick={() => closeMobileMenu("VR")}
-        >
-          VR EXPERIENCE
-        </Link>
-      </li>
-    </ul>
+      </div>
+    </div>
+  </nav>
   );
 }
 
