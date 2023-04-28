@@ -47,7 +47,7 @@ function Navigation({ isLoaded }){
   window.addEventListener('resize', showButton);
 
   return (
-    <ul>
+    <ul className='navbar-container'>
       <li className='nav-item'>
         <NavLink className='nav-links' exact to="/">Home</NavLink>
         {isLoaded && sessionLinks}
