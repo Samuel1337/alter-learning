@@ -66,36 +66,9 @@ function Navigation({ isLoaded }){
           <Link
           
             className='nav-links'
-            onClick={() => closeMobileMenu("novel")}
+            onClick={() => closeMobileMenu("home")}
           >
-            About
-          </Link>
-        </li>
-        <li className='nav-item'>
-          <Link
-          
-            className='nav-links'
-            onClick={() => closeMobileMenu("musical")}
-          >
-            Games
-          </Link>
-        </li>
-        <li className='nav-item'>
-          <Link
-          
-            className='nav-links'
-            onClick={() => closeMobileMenu("VR")}
-          >
-            Our Team
-          </Link>
-        </li>
-        <li className='nav-item'>
-          <Link
-          
-            className='nav-links'
-            onClick={() => closeMobileMenu("VR")}
-          >
-            Contact
+            Chat
           </Link>
         </li>
       </ul>

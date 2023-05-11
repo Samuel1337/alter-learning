@@ -1,9 +1,5 @@
-/* blue: #1e4488; */
-/* orange: #f5831f; */
-
-
 .navbar {
-  background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(215, 215, 215) 100%);
+  background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
   height: 80px;
   display: flex;
   justify-content: center;
@@ -12,7 +8,6 @@
   position: sticky;
   top: 0;
   z-index: 999;
-  box-shadow: 0 0 8px rgba(155, 155, 155, 0.5);
 }
 
 .navbar-container {
@@ -33,10 +28,6 @@
   display: flex;
   align-items: center;
 }
-  
-.alter-logo {
-  height: 100px;
-}
 
 .capital {
   font-size: 2.2rem;
@@ -50,7 +41,7 @@
 
 .nav-menu {
   display: grid;
-  grid-template-columns: repeat(5, auto);
+  grid-template-columns: repeat(4, auto);
   grid-gap: 10px;
   list-style: none;
   text-align: center;
@@ -64,18 +55,16 @@
 }
 
 .nav-links {
-  color: #5a5a5a;
+  color: #fff;
   display: flex;
   align-items: center;
   text-decoration: none;
-  /* padding: 0.5rem 1rem; */
-  padding-inline: 1rem;
+  padding: 0.5rem 1rem;
   height: 100%;
 }
 
 .nav-links:hover {
-  color: #f5831f;
-  border-bottom: 4px solid #f5831f;
+  border-bottom: 4px solid #fff;
   transition: all 0.2s ease-out;
 }
 
@@ -89,10 +78,6 @@
 
 .menu-icon {
   display: none;
-}
-
-.profile-button {
-  
 }
 
 @media screen and (max-width: 960px) {
@@ -114,7 +99,7 @@
   }
 
   .nav-menu.active {
-    background: #c1c1c1;
+    background: #242222;
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
@@ -177,4 +162,3 @@
     transition: 250ms;
   }
 }
-  
